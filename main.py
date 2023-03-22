@@ -35,8 +35,9 @@ player = int(input("Type 0 for rock, Type 1 for paper or Type 2 for scissors?\n 
 computer = random.randint(0, 2)
 
 print("Computer choise: ")
-
-if player == 0 and computer == 2 :
+if player >= 5 or player < 0 :
+  print("You typed an invalid number, you lose!")
+elif player == 0 and computer == 2 :
   print(rps[computer])
   print(rps[player])
   print("You win!")
